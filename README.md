@@ -1,4 +1,63 @@
-# notebooklm-py
+# notebooklm-py — AndieKobbieTech maintained fork
+
+> An independently maintained fork of [Teng Lin's notebooklm-py](https://github.com/teng-lin/notebooklm-py). This fork builds on Teng's substantial open-source work rather than attempting to recreate it.
+
+**Original project:** [teng-lin/notebooklm-py](https://github.com/teng-lin/notebooklm-py)  
+**This fork:** [andiekobbietks/notebooklm-py](https://github.com/andiekobbietks/notebooklm-py)
+
+## About this fork
+
+This repository is an independent extension of an existing open-source integration. The fork is deliberate: the upstream project already provides a substantial NotebookLM client and developer interfaces, and rebuilding those components would duplicate maintenance effort rather than advance the work.
+
+The focus here is to preserve that foundation while exploring additional capabilities around research preservation, traceable exports, extraction assurance and agent interoperability. Upstream remains the canonical home of the original implementation. This fork will track its development, keep its changes reviewable and contribute generally useful fixes back where appropriate.
+
+## Acknowledgement
+
+Thank you to **Teng Lin**, the original creator and maintainer of [notebooklm-py](https://github.com/teng-lin/notebooklm-py). The breadth of the existing client, CLI, MCP and REST integrations, together with the engineering and documentation behind them, gives this fork a strong foundation. I am building on that work, not claiming it as my own.
+
+Upstream remains the canonical project for the original implementation. This fork is independently maintained and does not imply Teng's endorsement. I intend to follow upstream development, preserve all applicable attribution and licence notices, and offer generally useful fixes back to the original project where appropriate.
+
+## What this fork is for
+
+The upstream project already provides the core NotebookLM integration. The fork's additional direction is to investigate and develop stronger:
+
+- **Research preservation and portability:** export notebooks and their available resources into a durable, inspectable local archive.
+- **Provenance:** record where each exported resource came from, when and how it was retrieved, and which exporter/schema version handled it.
+- **Completeness and assurance:** report what was exported, what was unavailable, what failed and what remains unverified. Never equate an unobservable resource with a resource that does not exist.
+- **Integrity:** calculate and verify checksums over the exact bytes actually archived.
+- **Agent interoperability:** explore optional, privacy-conscious AgentSON JSONL event integration without coupling the core client to an external event system.
+
+These are roadmap goals, not claims that every capability is already implemented. NotebookLM uses undocumented service interfaces; availability can vary by resource type, account, backend and upstream changes. In particular, original uploaded files, NotebookLM-indexed text, user notes, chat history and generated Studio artefacts are different resource classes and must not be conflated.
+
+## Architecture and development
+
+The fork keeps the upstream implementation and its existing architecture as the starting point. The CLI, Python API, MCP and REST surfaces are documented as adapters over shared application and client layers; the Web and Android backends remain distinct implementations.
+
+See the fork's [architecture, state diagrams and CLI/API data models](docs/fork/architecture-and-data-models.md), [archive and provenance model](docs/fork/archive-provenance-model.md), [roadmap](docs/fork/roadmap.md), and [upstream maintenance policy](docs/fork/upstream-maintenance.md).
+
+## Project knowledge base
+
+The [project documentation wiki source](docs/wiki/Home.md) covers architecture, CLI and Python API, MCP and REST, archive/provenance, roadmap, contribution and security practices.
+
+## Relationship to upstream
+
+This repository is an independent community fork. It is **not affiliated with, endorsed by, or maintained by Google**, and it is not the upstream repository. Upstream remains the canonical source for Teng Lin's project.
+
+The maintenance approach is to:
+1. Track `teng-lin/notebooklm-py` as the upstream source.
+2. Bring upstream changes into this fork through reviewable pull requests.
+3. Preserve upstream copyright and licence notices.
+4. Keep fork-specific work isolated where practical, with tests and explicit documentation.
+5. Offer suitable bug fixes and general improvements back to upstream rather than assuming every fork-specific change belongs there.
+
+The scheduled upstream workflow opens or updates a pull request; it does not merge changes automatically. See [UPSTREAM maintenance](docs/fork/upstream-maintenance.md).
+
+## Licence and attribution
+
+The upstream repository's MIT licence and its copyright notice are retained. See [LICENSE](LICENSE). Fork-specific contributions are made under the terms of that licence unless a file or contribution explicitly states otherwise. Please preserve applicable notices when copying or redistributing code.
+
+---
+
 <p align="left">
   <img src="https://raw.githubusercontent.com/teng-lin/notebooklm-py/main/notebooklm-py.png" alt="notebooklm-py logo" width="128">
 </p>
