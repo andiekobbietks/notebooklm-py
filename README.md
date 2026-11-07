@@ -5,11 +5,17 @@
 **Original project:** [teng-lin/notebooklm-py](https://github.com/teng-lin/notebooklm-py)  
 **This fork:** [andiekobbietks/notebooklm-py](https://github.com/andiekobbietks/notebooklm-py)
 
+## About this fork
+
+This repository is an independent extension of an existing open-source integration. The fork is deliberate: the upstream project already provides a substantial NotebookLM client and developer interfaces, and rebuilding those components would duplicate maintenance effort rather than advance the work.
+
+The focus here is to preserve that foundation while exploring additional capabilities around research preservation, traceable exports, extraction assurance and agent interoperability. Upstream remains the canonical home of the original implementation. This fork will track its development, keep its changes reviewable and contribute generally useful fixes back where appropriate.
+
 ## Acknowledgement
 
-First and foremost, thank you to **Teng Lin**, the original creator and maintainer of `notebooklm-py`. The breadth of the existing Python client, CLI, MCP and REST adapters, backend work, tests and documentation represents a significant engineering contribution. This fork exists because that work is worth building on.
+Thank you to **Teng Lin**, the original creator and maintainer of [notebooklm-py](https://github.com/teng-lin/notebooklm-py). The breadth of the existing client, CLI, MCP and REST integrations, together with the engineering and documentation behind them, gives this fork a strong foundation. I am building on that work, not claiming it as my own.
 
-The principle behind this fork is straightforward: **build upon what works, preserve what matters, and extend what is possible.** The intention is to keep tracking upstream, retain attribution and licensing, contribute useful improvements back where appropriate, and develop additional capabilities in clearly separated, reviewable changes.
+Upstream remains the canonical project for the original implementation. This fork is independently maintained and does not imply Teng's endorsement. I intend to follow upstream development, preserve all applicable attribution and licence notices, and offer generally useful fixes back to the original project where appropriate.
 
 ## What this fork is for
 
@@ -28,6 +34,10 @@ These are roadmap goals, not claims that every capability is already implemented
 The fork keeps the upstream implementation and its existing architecture as the starting point. The CLI, Python API, MCP and REST surfaces are documented as adapters over shared application and client layers; the Web and Android backends remain distinct implementations.
 
 See the fork's [architecture, state diagrams and CLI/API data models](docs/fork/architecture-and-data-models.md), [archive and provenance model](docs/fork/archive-provenance-model.md), [roadmap](docs/fork/roadmap.md), and [upstream maintenance policy](docs/fork/upstream-maintenance.md).
+
+## Project knowledge base
+
+The [project documentation wiki source](docs/wiki/Home.md) covers architecture, CLI and Python API, MCP and REST, archive/provenance, roadmap, contribution and security practices.
 
 ## Relationship to upstream
 
